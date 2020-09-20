@@ -16,18 +16,6 @@ struct Animation {
     let velocity: CGFloat
     let rotate: CGFloat
     
-    var description: String {
-        return """
-        animationPreset: \(animationPreset)
-        curve: \(curve)
-        force: \(String(format: "%.02f", force))
-        duration: \(String(format: "%.02f", duration))
-        damping: \(String(format: "%.02f", damping))
-        velocity: \(String(format: "%.02f", velocity))
-        rotate: \(String(format: "%.02f", rotate))
-        """
-    }
-   
     static func getAnimations() -> Animation {
         return Animation(
             animationPreset: DataManager.shared.animationPresets.randomElement() ?? "pop",
